@@ -33,5 +33,11 @@ public class GetHello {
         return "Hello " + hello.getFirstName() + " " + hello.getLastName() + " From BridgeLabz!!";
     }
 
-    //route to test this => http://localhost:8080/hello/Aayush
+    /*
+        route to test this => http://localhost:8080/hello in postman with below raw body :
+        {
+            "firstName" : "Aayush",
+            "lastName" : "Kumar"
+        }
+    */
 }
