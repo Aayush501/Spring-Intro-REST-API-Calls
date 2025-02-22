@@ -11,5 +11,5 @@ public class GetHello {
         return "Hello " + name + " From BridgeLabz!!";
     }
 
-    //route to test this => http://localhost:8080/hello
+    //route to test this => http://localhost:8080/hello?name=Aayush
 }
