@@ -25,13 +25,14 @@ class HelloName {
 }
 
 @RestController
+@RequestMapping("/hello")
 public class GetHello {
 
-    // sayHello method that gets data from /:port/hello
-    @PostMapping("/hello")
-    public String sayHello(@RequestBody HelloName hello) {
-        return "Hello " + hello.getFirstName() + " " + hello.getLastName() + " From BridgeLabz!!";
+    // sayHello method that gets data from /:port/hello/{firstName}?{lastName}
+    @PutMapping("/{firstName}")
+    public String sayHello(@PathVariable String firstName, @RequestParam String lastName) {
+        return "Hello " + firstName + " " + lastName + " From BridgeLabz!!";
     }
 
-    //route to test this => http://localhost:8080/hello/Aayush
+    //route to test this => http://localhost:8080/hello/Aayush?lastName=Kumar
 }
