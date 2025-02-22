@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class GetHello {
 
-    // sayHello method that sends gets data from /:port/hello
+    // sayHello method that gets data from /:port/hello
     @GetMapping("/hello")
     public String sayHello(@RequestParam(required = false) String name) {
         return "Hello " + name + " From BridgeLabz!!";
