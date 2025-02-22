@@ -1,13 +1,15 @@
 package com.apicalls.requests.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class GetHello {
 
-    @GetMapping("/")
-    public String sayHello() {
-        return "Hello from BridgeLabz!!!";
+    // sayHello method that sends gets data from /:port/hello
+    @GetMapping("/hello")
+    public String sayHello(@RequestParam(required = false) String name) {
+        return "Hello " + name + " From BridgeLabz!!";
     }
+
+    //route to test this => http://localhost:8080/hello
 }
